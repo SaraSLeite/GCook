@@ -33,6 +33,8 @@ public string Preparo { get; set; }
 
 [Required]
 public int CategoriaId { get; set; }
-[ForeignKey()]
+[ForeignKey("CategoriaId")]
+public Categoria Categoria { get; set; }
+public ICollection<ReceitaIngrediente> Ingredientes { get; set; }
 
 }
