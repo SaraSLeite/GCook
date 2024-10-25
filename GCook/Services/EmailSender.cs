@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Mail;
 
@@ -7,13 +6,13 @@ namespace GCook.Services;
     {
         public async Task SendEmailAsync(string emailAddress, string subject, string htmlMessage)
         {
-            var email =  "gcook.app@outlook.com";
+            var mail =  "gcook.app@outlook.com";
             var pw = "QV3E4khpZBEcL7K";
 
             var client = new SmtpClient("smtp-mail.outlook.com", 587)
             {
-                EnableSsl = true;
-                Credentials = new NetworkCredential(MailAddress, pw)
+                EnableSsl = true,
+                Credentials = new NetworkCredential(mail, pw)
             };
 
             MailMessage sendMail = new(
@@ -24,6 +23,6 @@ namespace GCook.Services;
             );
             sendMail.IsBodyHtml = true;
 
-            await client.SendEmailAsync(sendMail);
+            await client.SendMailAsync(sendMail);
         }
     }
