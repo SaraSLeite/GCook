@@ -9,7 +9,7 @@ public class Comentario
 
 {
     [Key]
-    public int id {get; set; }
+    public int Id { get; set; }
 
     [Required]
     public int ReceitaId { get; set; }
@@ -18,13 +18,13 @@ public class Comentario
 
     [Required]
     public string UsuarioId { get; set; }
-    [ForeignKey ("UsuarioId")]
+    [ForeignKey("UsuarioId")]
     public Usuario Usuario { get; set; }
 
-public DateTime DataComentario { get; set; } = DateTime.Now;
+    public DateTime DataComentario { get; set; } = DateTime.Now;
 
-[StringLength(300)]
-public string TextoComentario { get; set; }
+    [StringLength(300)]
+    public string TextoComentario { get; set; }
 
 
 }

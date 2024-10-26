@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GCook.Models;
 
-    public class Usuario
+[Table("Usuario")]
+public class Usuario
 {
     [Key]
     public string UsuarioId { get; set; }
     [ForeignKey("UsuarioId")]
-    
+
     public IdentityUser ContaUsuario { get; set; }
 
     [Required]

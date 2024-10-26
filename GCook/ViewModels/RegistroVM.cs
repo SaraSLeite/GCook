@@ -11,7 +11,7 @@ namespace GCook.ViewModels;
         [DataType(DataType.Date)]
         [Display(Name = "Data de Nascimento", Prompt = "Informe sua data de Nascimento")]        
         [Required(ErrorMessage = "Por favor, informe sua data de Nascimento")]
-        public string DataNascimento { get; set; } = null;
+        public DateTime? DataNascimento { get; set; } 
 
         [Display(Name = "Informe seu Email")]        
         [Required(ErrorMessage = "Por favor, informe seu Email")]

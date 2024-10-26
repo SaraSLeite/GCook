@@ -6,13 +6,13 @@ namespace GCook.Models;
 public class Ingrediente
 
 {
-[Key]
-public int id { get; set; }
+    [Key]
+    public int Id { get; set; }
 
-[Required]
-[StringLength(50)]
-public string Nome { get; set; }
+    [Required]
+    [StringLength(50)]
+    public string Nome { get; set; }
 
-public ICollection<ReceitaIngrediente> Receitas { get; set; }
+    public ICollection<ReceitaIngrediente> Receitas { get; set; }
 
 }

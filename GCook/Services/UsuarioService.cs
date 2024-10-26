@@ -126,8 +126,9 @@ public class UsuarioService : IUsuarioService
 
     public async Task LogoffUsuario()
     {
-        var userEmail = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email); // Correção aqui
+        var userEmail = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email); 
         _logger.LogInformation($"Usuário {userEmail} fez logoff");
+        await _signInManager.SignOutAsync();
     }
 
     public async Task<List<string>> RegistrarUsuario(RegistroVM registro)
