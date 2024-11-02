@@ -256,7 +256,7 @@ public class AppDbSeed
                 NormalizedEmail = "ADMIN@GCOOK.COM",
                 UserName = "Admin",
                 NormalizedUserName = "ADMIN",
-                LockoutEnabled = false,
+                LockoutEnabled = true,
                 EmailConfirmed = true,
             }
         };
@@ -270,8 +270,8 @@ public class AppDbSeed
         List<Usuario> usuarios = new(){
             new Usuario(){
                 UsuarioId = users[0].Id,
-                Nome = "Sara da Silva Leite",
-                DataNascimento = DateTime.Parse("27/08/2006"),
+                Nome = "José Antonio Gallo Junior",
+                DataNascimento = DateTime.Parse("05/08/1981"),
                 Foto = "/img/usuarios/avatar.png"
             }
         };

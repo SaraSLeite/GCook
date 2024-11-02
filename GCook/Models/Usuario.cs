@@ -11,7 +11,7 @@ public class Usuario
     public string UsuarioId { get; set; }
     [ForeignKey("UsuarioId")]
 
-    public IdentityUser ContaUsuario { get; set; }
+    public IdentityUser ContaUsuario  { get; set; }
 
     [Required]
     [StringLength(50)]

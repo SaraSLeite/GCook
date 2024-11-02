@@ -1,13 +1,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace GCook.Models;
 
 [Table("ReceitaIngrediente")]
 public class ReceitaIngrediente
 {
-    [Key, Column(Order = 1)]
+    [Key,Column(Order = 1)]
     public int ReceitaId { get; set; }
     [ForeignKey("ReceitaId")]
 
@@ -24,5 +23,4 @@ public class ReceitaIngrediente
 
     [StringLength(200)]
     public string Preparo { get; set; }
-
 }

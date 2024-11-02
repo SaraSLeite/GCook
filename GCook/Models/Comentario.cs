@@ -1,12 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace GCook.Models;
 
 [Table("Comentario")]
 public class Comentario
-
 {
     [Key]
     public int Id { get; set; }
@@ -25,6 +23,4 @@ public class Comentario
 
     [StringLength(300)]
     public string TextoComentario { get; set; }
-
-
 }

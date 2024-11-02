@@ -23,7 +23,6 @@ public class Receita
 
     public Dificuldade Dificuldade { get; set; }
 
-
     [StringLength(300)]
     public string Foto { get; set; }
 
@@ -35,6 +34,6 @@ public class Receita
     public int CategoriaId { get; set; }
     [ForeignKey("CategoriaId")]
     public Categoria Categoria { get; set; }
-    public ICollection<ReceitaIngrediente> Ingredientes { get; set; }
 
+    public ICollection<ReceitaIngrediente> Ingredientes { get; set; }
 }
